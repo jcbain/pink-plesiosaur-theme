@@ -7,7 +7,7 @@
             <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
         {{ end }}
 
-        {{ "<!-- Main Stylesheet -->" | safeHTML }}
+        {{/*  {{ "<!-- Main Stylesheet -->" | safeHTML }}
         {{ $styles := resources.Get "css/style.css" | minify }}
-        <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
-    </head>
+        <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">  */}}
+</head>

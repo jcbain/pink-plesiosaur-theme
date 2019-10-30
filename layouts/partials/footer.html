@@ -1,0 +1,9 @@
+<footer class="navigation">
+        <ul class="navbar">
+            {{ range .Site.Menus.main }}
+                <li class="navitem">
+                        <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+                </li>
+            {{ end }}
+        </ul>
+    </footer>
