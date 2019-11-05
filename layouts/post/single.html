@@ -11,18 +11,18 @@
   </ul>
   {{ end }}
   <div>
+        <section>
+          <h4> {{ .Date.Format "Monday Jan 2, 2006" }} </h4>
+          <h5> {{ .WordCount }} Words </h5>
+        </section>
+        </div>
+  <div>
         <article>
            {{ .Content }}
         </article>
   </div>
 </section>
 <aside>
-    <div>
-    <section>
-      <h4> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
-      <h5> {{ .WordCount }} Words </h5>
-    </section>
-    </div>
     <div>
         {{ with .PrevInSection }}
           <p>Previous post:
