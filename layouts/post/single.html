@@ -1,0 +1,39 @@
+{{ define "main" }}
+<section>
+  <h1>{{ .Title }}</h1>
+  <h2>by {{ .Params.Author }}</h2>
+  {{ with .Params.tags }}
+  <ul>
+    {{ range . }}
+      {{/*  <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>  */}}
+      <li>{{ . }}</li>
+    {{ end }}
+  </ul>
+  {{ end }}
+  <div>
+        <article>
+           {{ .Content }}
+        </article>
+  </div>
+</section>
+<aside>
+    <div>
+    <section>
+      <h4> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+      <h5> {{ .WordCount }} Words </h5>
+    </section>
+    </div>
+    <div>
+        {{ with .PrevInSection }}
+          <p>Previous post:
+            <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+          </p>
+        {{ end }}
+        {{ with .NextInSection }}
+          <p>Next post: 
+            <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+          </p>
+        {{ end }}
+    </div>
+</aside>
+{{ end }}
