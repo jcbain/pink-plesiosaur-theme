@@ -3,7 +3,7 @@
   <h1>{{ .Title }}</h1>
   {{ range .Pages.ByPublishDate.Reverse }}
     <p>
-      <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }} </a> by {{ .Params.Author }}
+      <a href="{{ .RelPermalink }}">{{ .Title }} </a> {{ if .Params.Author }} by {{ .Params.Author }} {{ end }}
     </p>
   {{ end }}
 
