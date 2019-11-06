@@ -2,7 +2,7 @@
   <h1>Hello World</h1>
   {{ range .Data.Pages }}
     {{ if eq .Type "post" }}
-    {{range first 2 .Pages.ByPublishedDate }}
+    {{range first 2 .Pages.ByPublishDate.Reverse }}
       <div>
         <p>
           <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }} </a> by {{ .Params.Author }}
