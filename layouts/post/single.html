@@ -5,8 +5,7 @@
   {{ with .Params.tags }}
   <ul>
     {{ range . }}
-      {{/*  <li> <a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>  */}}
-      <li>{{ . }}</li>
+      <li> <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
     {{ end }}
   </ul>
   {{ end }}
@@ -21,6 +20,16 @@
            {{ .Content }}
         </article>
   </div>
+</section>
+<section>
+  <h3>Logged Under:</h3>
+{{ with .Params.categories }}
+<ul>
+  {{ range . }}
+    <li> <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
+  {{ end }}
+</ul>
+{{ end }}
 </section>
 <aside>
     <div>
