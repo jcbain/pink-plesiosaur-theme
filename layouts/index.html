@@ -1,3 +1,14 @@
 {{ define "main" }}
   <h1>Hello World</h1>
+  {{ range .Data.Pages }}
+    {{ if eq .Type "post" }}
+    {{range first 2 .Pages.ByPublishedDate }}
+      <div>
+        <p>
+          <a class="font-125" href="{{ .RelPermalink }}">{{ .Title }} </a> by {{ .Params.Author }}
+        </p>
+      </div>
+    {{ end }}
+    {{ end }}
+  {{ end }}
 {{ end }}
