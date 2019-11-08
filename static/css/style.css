@@ -1,3 +1,7 @@
+body {
+  background-color: #fffff7;
+}
+
 .navbar-container{
     display: flex;
     justify-content: center;
@@ -10,7 +14,7 @@
   }
 
 .navitem {
-      padding-top: 40px;
+      padding-top: 60px;
       font-family: 'Righteous';
       font-size: 20px;
   }
