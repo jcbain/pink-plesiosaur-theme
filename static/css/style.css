@@ -2,6 +2,7 @@ body {
   background-color: #fffff7;
 }
 
+/* HEADER */
 .navbar-container{
     display: flex;
     justify-content: center;
@@ -22,4 +23,17 @@ body {
   a {
     text-decoration: none;
     color: #fdadb7
+}
+
+/* INDEX */
+.welcome {
+  font-family: 'Londrina Outline', cursive;
+  font-size: 100px;
+  color: #ebdb0f;
+}
+
+.description{
+  font-family: 'Londrina Solid', sans-serif;
+  font-size: 30px;
+  color: #382500;
 }

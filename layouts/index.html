@@ -1,5 +1,6 @@
 {{ define "main" }}
-  <h1>Hello World</h1>
+  <h1 class="welcome">{{ .Site.Params.WelcomeMessage | markdownify }}</h1>
+  <h2 class="description">{{ .Site.Params.Description | markdownify }}</h2>
   {{ range .Data.Pages }}
     {{ if eq .Type "post" }}
     {{range first 2 .Pages.ByPublishDate.Reverse }}
