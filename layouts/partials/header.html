@@ -1,15 +1,14 @@
-<header class="header">
-    <ul class="navbar">
+<header class="navbar-container">
+    <div class="navbar">
         {{ range .Site.Menus.main }}
         {{ if eq .Name "Logo"}}
         {{ $logo := $.Site.Params.Logo }}
-          <li><a href="{{ .URL | absURL }}"><img src="{{ $logo.URL }}" alt="{{ $logo.Alt }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}"/></a></li>
+          <div><a href="{{ .URL | absURL }}"><img src="{{ $logo.URL }}" alt="{{ $logo.Alt }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}"/></a></div>
         {{ else }}
-
-            <li class="navitem">
+            <div class="navitem">
                     <a href="{{ .URL | absURL }}">{{ .Name }}</a>
-            </li>
+            </div>
         {{ end }}
         {{ end }}
-    </ul>
+    </div>
 </header>

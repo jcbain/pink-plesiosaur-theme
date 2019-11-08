@@ -1,0 +1,21 @@
+.navbar-container{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    width: 900px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+.navitem {
+      padding-top: 40px;
+      font-family: 'Righteous';
+      font-size: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fdadb7
+}
