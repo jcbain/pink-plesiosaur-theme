@@ -2,7 +2,8 @@
     <ul class="navbar">
         {{ range .Site.Menus.main }}
         {{ if eq .Name "Logo"}}
-          <li><a href="{{ .URL | absURL }}"><img src="{{ $.Site.Params.Logo.URL }}" /></a></li>
+        {{ $logo := $.Site.Params.Logo }}
+          <li><a href="{{ .URL | absURL }}"><img src="{{ $logo.URL }}" alt="{{ $logo.Alt }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}"/></a></li>
         {{ else }}
 
             <li class="navitem">
