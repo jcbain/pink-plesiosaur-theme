@@ -1,7 +1,7 @@
-<header>
-    <ul>
+<header class="header">
+    <ul class="navbar">
         {{ range .Site.Menus.main }}
-            <li>
+            <li class="navitem">
                     <a href="{{ .URL | absURL }}">{{ .Name }}</a>
             </li>
         {{ end }}
