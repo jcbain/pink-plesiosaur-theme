@@ -1,12 +1,14 @@
 body {
   background-color: #fffff7;
+  padding: 0;
 }
 
 /* HEADER */
-.navbar-container{
+.navbar-container {
     display: flex;
     justify-content: center;
-}
+    background-color: #b4dbc0;
+  }
 
 .navbar {
     width: 900px;
@@ -50,12 +52,15 @@ body {
   color: #ebdb0f;
   grid-row: 1 / 2;
   grid-column: 2 / 3;
+  text-align: center;
 }
 
 .description{
   font-family: 'Londrina Solid', sans-serif;
   font-size: 30px;
-  color: #bfbbb2;
+  color: #adaaa1;
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+  text-align: center;
 }
+/* #b4dbc0 */
