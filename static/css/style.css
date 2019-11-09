@@ -4,11 +4,21 @@ body {
 }
 
 /* HEADER */
+
 .navbar-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.navbar {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+/* .navbar-container {
     display: flex;
     justify-content: center;
     background-color: #b4dbc0;
-  }
+  } */
 
 .navbar {
     width: 900px;
