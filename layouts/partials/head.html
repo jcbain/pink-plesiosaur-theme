@@ -6,11 +6,24 @@
         {{ else }}
             <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
         {{ end }}
-    {{/*  <link href="{{"css/style.css" | relURL}}" rel="stylesheet" type="text/css">   */}}
-    {{ $cssOpts := (dict "targetPath" "css/style.css" "enableSourceMap" true ) }}
-    {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.style.css" . | toCSS $cssOpts }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous" />   
+    
+    {{/*  GOOGLE FONTS  */}}
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet"/>   
     <link href="https://fonts.googleapis.com/css?family=Londrina+Outline&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap" rel="stylesheet"> 
+
+    {{/*  CSS/SCSS  */}}
+    {{/*  <link href="{{"css/style.css" | relURL}}" rel="stylesheet" type="text/css">   */}}
+    {{ $cssOpts := (dict "targetPath" "css/stylez.css" "enableSourceMap" true ) }}
+    {{ $styles := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.stylez.css" . | toCSS $cssOpts | minify | fingerprint }}    
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+
+    {{/*  Custom CSS  */}}
+    {{ range .Site.Params.custom_css }}
+        <link rel="stylesheet" href="{{ . | relURL }}" />
+    {{ end }}
+
+    {{ range .Site.Params.custom_js }}
+        <script src="{{ . | relURL }}"></script>
+    {{ end }}
 </head>
