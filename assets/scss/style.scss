@@ -6,13 +6,19 @@ yellow: #ebdb0f;
 cream: #fffff7;
  */
 
+$color_pink      : #fdadb7;
+$color_mint      : #b4dbc0;
+$color_dark_mint : #84a38d;
+$color_yellow    : #ebdb0f;
+$color_cream     : #fffff7;
+
 html {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #fffff7;
+  background-color: $color_cream;
   padding: 0;
   margin: 0;
 }
@@ -21,26 +27,15 @@ body {
 
 .navbar-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(9, 1fr);
 }
-
-.navbar {
-  grid-row: 1 / 1;
-  grid-column: 1 / 1;
-}
-/* .navbar-container {
-    display: flex;
-    justify-content: center;
-    background-color: #b4dbc0;
-  } */
-
-.navbar {
-    width: 900px;
-    display: flex;
-    justify-content: space-around;
-  }
 
 .navitem {
+  justify-self: center;
+}
+
+.navtext {
       padding-top: 60px;
       font-family: 'Righteous';
       font-size: 20px;
@@ -48,7 +43,7 @@ body {
   
   a {
     text-decoration: none;
-    color: #fdadb7;
+    color: $color_pink;
 }
 
 /* INDEX */
@@ -58,7 +53,7 @@ body {
   grid-template-columns: 0.25fr 1fr 0.25fr;
   grid-template-rows: 25vh 35vh;
   justify-items: center;
-  background-color: #b4dbc0;
+  background-color: $color_mint;
 }
 
 .empty.left{
@@ -74,7 +69,7 @@ body {
 .welcome {
   font-family: 'Londrina Outline', cursive;
   font-size: 100px;
-  color: #fffff7;
+  color: $color_cream;
   grid-row: 1 / 2;
   grid-column: 2 / 3;
   text-align: center;
@@ -83,7 +78,7 @@ body {
 .description{
   font-family: 'Londrina Solid', sans-serif;
   font-size: 30px;
-  color: #84a38d;
+  color: $color_dark_mint;
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   text-align: center;
