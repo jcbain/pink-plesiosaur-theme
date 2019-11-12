@@ -3,7 +3,7 @@
     {{ range .Site.Menus.main }}
         {{ if eq .Name "Logo"}}
         {{ $logo := $.Site.Params.Logo }}
-            <div class="navitem"><a href="{{ .URL | absURL }}"><img src="{{ $logo.URL }}" alt="{{ $logo.Alt }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}"/></a></div>
+            <div class="navitem"><a href="{{ .URL | absURL }}"><img class="logo" src="{{ $logo.URL }}" alt="{{ $logo.Alt }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}"/></a></div>
         {{ else }}
             <div class="navitem navtext">
                 <a href="{{ .URL | absURL }}">{{ .Name }}</a>

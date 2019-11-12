@@ -6,14 +6,13 @@ yellow: #ebdb0f;
 cream: #fffff7;
  */
 
-
 /* HEADER */
 
 .navbar-container {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(7, 1fr);
-  height: 120px;
+  height: 110px;
 }
 
 .navitem {
@@ -22,7 +21,7 @@ cream: #fffff7;
 
 .navtext {
       padding-top: 60px;
-      font-family: 'Righteous';
+      font-family: 'Quicksand';
       font-size: 20px;
   }
   
