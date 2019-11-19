@@ -11,19 +11,39 @@ cream: #fffff7;
 .navbar-container {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: 1.5fr 0.5fr;
   height: 110px;
 }
 
-.navitem {
-  justify-self: center;
+.navleft {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
 }
+
+.navright {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+// .navitem {
+//   justify-self: center;
+// }
 
 .navtext {
       padding-top: 60px;
       font-family: 'Quicksand';
-      font-size: 20px;
+      font-size: 15px;
   }
+
+  .navname {
+    font-size: 40px;
+    font-family: 'Quicksand';
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+
   
   a {
     text-decoration: none;
