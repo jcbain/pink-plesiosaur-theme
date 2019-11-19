@@ -25,7 +25,9 @@ cream: #fffff7;
 .navright {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, auto);
+  justify-items: center;
+  text-align: right;
 }
 
 // .navitem {
@@ -36,8 +38,6 @@ cream: #fffff7;
       padding-top: 20px;
       font-family: 'Quicksand';
       font-size: 15px;
-      justify-self: right;
-      width: 60px;
   }
 
   .navname {
