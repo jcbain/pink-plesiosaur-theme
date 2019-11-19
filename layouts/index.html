@@ -1,8 +1,10 @@
 {{ define "main" }}
   <div class="welcome-container">
     <div class="empty left"></div>
-    <h1 class="welcome">{{ .Site.Params.WelcomeMessage | markdownify }}</h1>
-    <h2 class="description">{{ .Site.Params.Description | markdownify }}</h2>
+    <div class="message-container">
+       <h1 class="welcome">{{ .Site.Params.WelcomeMessage | markdownify }}</h1>
+       <h2 class="description">{{ .Site.Params.Description | markdownify }}</h2>
+    </div>
     <div class="empty right"></div>
   </div>
   {{ range .Data.Pages }}
