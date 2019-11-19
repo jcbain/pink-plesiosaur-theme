@@ -5,9 +5,8 @@
     grid-template-columns: .75fr 1fr 0.25fr;
     grid-template-rows: 25vh 35vh;
     justify-items: center;
-    background-color: $color_mint;
 
-    background-image: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .6)), url("/images/banner.png");
+    // background-image: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .6)), url("/images/banner.png");
 
     /* Set a specific height */
     height: 400px;
