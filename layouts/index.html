@@ -7,15 +7,30 @@
     </div>
     <div class="empty right"></div>
   </div>
+  <div class="showcase-container">
   {{ range .Data.Pages }}
     {{ if eq .Type "post" }}
-    {{range first 2 .Pages.ByPublishDate.Reverse }}
-      <div>
-        <p>
-          <a href="{{ .RelPermalink }}">{{ .Title }} </a> {{ if .Params.Author }} by {{ .Params.Author }} {{ end }}
+    {{range first 3 .Pages.ByPublishDate.Reverse }}
+    {{ if .Params.Image }}
+      <div class="post showcase-post" style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url({{ .Params.Image | absURL }});">
+    {{ else }}
+      <div class="post showcase-post"></div>
+    {{ end }}
+       <div class="empty top"></div>
+       <div class="post-info-container">
+         <div class="post-info">
+        <p class="info-title">
+          <a href="{{ .RelPermalink }}">{{ .Title }} </a> 
         </p>
+        <p class="info-date info-text">{{ .Date.Format "Monday Jan 2, 2006" }}</p>
+        <p class="info-author info-text">{{ .Params.Author }}</p> 
+      </div>
+      <div class="empty bottomright"></div>
+      </div>
+      
       </div>
     {{ end }}
     {{ end }}
   {{ end }}
+  </div>
 {{ end }}

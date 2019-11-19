@@ -1,17 +1,14 @@
 /* INDEX */
 
+// banner 
 .welcome-container {
     display: grid;
     grid-template-columns: .5fr 1fr 0.5fr;
     grid-template-rows: 1fr;
     justify-items: center;
-
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/images/banner_shapes.png");
-
     /* Set a specific height */
     height: 400px;
-  
-    /* Position and center the image to scale nicely on all screens */
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,4 +48,55 @@
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     text-align: center;
+  }
+
+  // showcase
+
+  .showcase-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 300px;
+    padding: 40px;
+  }
+
+  .showcase-post{
+    margin: 10px;
+    padding: 10px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr .5fr;
+    box-shadow: 0 10px 0px -6px $color_light_mint;
+    border: .5px solid $color_black;
+  }
+
+
+  .post-info-container{
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    grid-template-rows: 1fr;
+  }
+
+  .post-info{
+    background-color: $color_pink_alt;
+    border: 2px solid $color_black;
+    padding: 5px 10px;
+  }
+
+  .info-title a{
+    font-family: 'Righteous', sans-serif;
+    font-size: 15px;
+    color: $color_black;
+    margin: 0px;
+  }
+
+  .info-text {
+    font-family: 'Abel', sans-serif;
+    font-size: 10px;
+    color: $color_black;
+    margin: 0px;
   }
