@@ -1,5 +1,19 @@
-<footer>
-    <h1>FOOTER</h1>
-    <p>Just a footer placeholder</p>
-    <p>The rest of the goodies should go right here.</p>
+<footer class="footer-container">
+    <div class="footer-empty-left"></div>
+    <div class="address-container">
+        <h2 class="address-hearder">address:</h2>
+        <p>{{ .Site.Params.Address }}</p>
+        <p>{{ .Site.Params.City }}</p>
+    </div>
+    <div class="icon-container">
+        {{ with .Site.Params.social }}
+              {{ range sort .}}
+                  <div class="icon">
+                    <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+                      <i class="{{ .icon }}" aria-hidden="true"></i>
+                    </a>
+                </div>
+              {{ end }}
+        {{ end }}
+    </div>
 </footer>
