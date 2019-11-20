@@ -7,5 +7,5 @@
       <a href="{{ .RelPermalink }}">{{ .Title }} </a> {{ if .Params.Author }} by {{ .Params.Author }} {{ end }}
     </p>
   {{ end }}
-  {{ template "_internal/pagination.html" . }}
+  {{- partial "paginator.html" . -}}
 {{ end }}
