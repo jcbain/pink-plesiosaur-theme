@@ -78,12 +78,12 @@
       <!-- Simple page numbers. -->
       {{ else }}
 
-        {{ $.Scratch.Set "page_number_flag" true }}
+        {{ $.Scratch.Set "page-number-flag" true }}
 
       {{ end }}
 
       <!-- Output page numbers. -->
-      {{ if eq ($.Scratch.Get "page_number_flag") true }}
+      {{ if eq ($.Scratch.Get "page-number-flag") true }}
         <div class="pagination-item{{ if eq . $paginator }} pagination-item--current{{ end }}">
           <a href="{{ .URL }}" class="pagination-link">
             {{ .PageNumber }}
