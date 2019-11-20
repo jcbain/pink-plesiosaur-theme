@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+  <h1>{{ .Title }}</h1>
+  <h2>AWESOME</h2>
+  {{ range .Paginator.Pages }}
+    <p>
+      <a href="{{ .RelPermalink }}">{{ .Title }} </a> {{ if .Params.Author }} by {{ .Params.Author }} {{ end }}
+    </p>
+  {{ end }}
+  {{ template "_internal/pagination.html" . }}
+{{ end }}
