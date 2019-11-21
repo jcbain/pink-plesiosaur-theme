@@ -13,6 +13,7 @@
 {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
 
 <!-- If there's more than one page. -->
+<div class="pagination-container">
 {{ if gt $paginator.TotalPages 1 }}
 
   <div class="pagination">
@@ -84,7 +85,7 @@
 
       <!-- Output page numbers. -->
       {{ if eq ($.Scratch.Get "page-number-flag") true }}
-        <div class="pagination-item{{ if eq . $paginator }} pagination-item--current{{ end }}">
+        <div class="pagination-item{{ if eq (mod .PageNumber $max_links) 1}} pagination-item--three {{ end }}">
           <a href="{{ .URL }}" class="pagination-link">
             {{ .PageNumber }}
           </a>
@@ -113,3 +114,5 @@
 
 </div><!-- .pagination -->
 {{ end }}
+</div><!-- .pagination-container -->
+

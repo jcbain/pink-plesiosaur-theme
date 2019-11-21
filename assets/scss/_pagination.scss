@@ -1,0 +1,53 @@
+.pagination-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // display: grid;
+    // grid-template-rows: 1fr;
+    // grid-template-columns: repeat(9, 1fr);
+    // width: 200px;
+    // justify-self: center;
+    // justify-items: center;
+    // grid-gap: 4px;
+}
+
+.pagination-item{
+    background-color: rgba(255, 255, 247, .8);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.pagination-item i{
+    color: $color_black;
+}
+
+.pagination-item a{
+    color: $color_black;
+}
+// .pagination-item--first{
+//     grid-column: 1 / 2;
+// }
+
+// .pagination-item--previous{
+//     grid-column: 2 / 3;
+// }
+
+// .pagination-item--three{
+//     grid-column: 3 / 4;
+// }
+
+// .pagination-item--next{
+//     grid-column: 7/ 8;
+// }
+
+// .pagination-item--last{
+//     grid-column: 8 / 9;
+// }
