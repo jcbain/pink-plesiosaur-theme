@@ -9,20 +9,18 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    // display: grid;
-    // grid-template-rows: 1fr;
-    // grid-template-columns: repeat(9, 1fr);
-    // width: 200px;
-    // justify-self: center;
-    // justify-items: center;
-    // grid-gap: 4px;
 }
 
 .pagination-item{
-    background-color: rgba(255, 255, 247, .8);
+    display: grid;
+    background-color: rgba(255, 255, 247, .5);
     width: 40px;
     height: 40px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    margin: 5px;
+    border: 1px solid $color_black;
 }
 
 .pagination-item i{
@@ -30,6 +28,8 @@
 }
 
 .pagination-item a{
+    font-family: 'Righteous', sans-serif;
+    font-size: 10px;
     color: $color_black;
 }
 // .pagination-item--first{
