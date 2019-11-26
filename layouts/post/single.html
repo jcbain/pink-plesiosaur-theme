@@ -1,5 +1,7 @@
 {{ define "main" }}
-<section>
+<div class="single-container">
+<div class="empty-left"></div>
+<div>
   <h1>{{ .Title }}</h1>
   <h2>by {{ .Params.Author }}</h2>
   {{ with .Params.tags }}
@@ -10,18 +12,18 @@
   </ul>
   {{ end }}
   <div>
-        <section>
+        <div>
           <h4> {{ .Date.Format "Monday Jan 2, 2006" }} </h4>
           <h5> {{ .WordCount }} Words </h5>
-        </section>
+        </div>
         </div>
   <div>
         <article>
            {{ .Content }}
         </article>
   </div>
-</section>
-<section>
+</div>
+<div>
   <h3>Logged Under:</h3>
 {{ with .Params.categories }}
 <ul>
@@ -30,7 +32,6 @@
   {{ end }}
 </ul>
 {{ end }}
-</section>
 <aside>
     <div>
         {{ with .PrevInSection }}
@@ -45,4 +46,7 @@
         {{ end }}
     </div>
 </aside>
+</div>
+<div class="empty-right"></div>
+</div>
 {{ end }}
