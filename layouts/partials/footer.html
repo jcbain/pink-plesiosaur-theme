@@ -1,5 +1,19 @@
 <footer class="footer-container">
-    <div class="footer-empty-left"></div>
+  <div class="container-left">
+    <div class="container-empty"></div>
+    <div class="copyright-container">
+        <i class="far fa-copyright copyright-item"></i>
+        <p class="copyright-item">{{ now.Year }}</p>
+        <a class="copyright-item" href="https://gohugo.io/">
+          <p>hugo</p>
+        </a>
+        <p class="copyright-item"> & </p>
+        <a class="copyright-item" href="{{ .Site.Params.CopyrightURL}}">
+          <p>{{ .Site.Params.CopyrightPerson }}</p>
+        </a>
+    </div>
+  </div>
+    <div class="container-empty"></div>
     <div class="address-container">
         <h2 class="address-hearder">address:</h2>
         <p>{{ .Site.Params.Address }}</p>

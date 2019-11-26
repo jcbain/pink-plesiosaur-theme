@@ -2,8 +2,36 @@
     background-color: $color_dark_pink;
     height: 120px;
     display: grid;
-    grid-template-columns: 1fr .5fr .5fr;
+    grid-template-columns: .5fr .5fr .5fr .5fr;
     grid-template-rows: 1fr;
+}
+
+.container-left{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr;
+}
+.copyright-container{
+    font-family: 'Abel', sans-serif;
+    font-size: 10px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: top;
+}
+
+.copyright-container i{
+    padding-top: 2px;
+}
+
+.copyright-item{
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.copyright-item p{
+    margin-top: 0px;
 }
 
 .address-container{
