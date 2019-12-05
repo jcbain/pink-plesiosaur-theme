@@ -50,19 +50,25 @@
     text-align: center;
   }
 
+  .header-container {
+    margin-top: 120px;
+  }
+
   // showcase
 
   .showcase-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    height: 300px;
+    height: 400px;
     padding: 40px;
+    margin-bottom: 80px;
   }
 
   .showcase-post{
-    margin: 10px;
+    margin: 30px;
     padding: 10px;
+    height: 90%;
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -70,8 +76,9 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1.5fr .5fr;
-    box-shadow: 0 10px 0px -6px $color_light_mint;
-    border: .5px solid $color_black;
+    box-shadow: 10px 10px 5px rgba(165, 165, 165, .5);
+    // box-shadow: 0 10px 0px -6px $color_light_mint;
+    // border: .5px solid $color_black;
   }
 
 
