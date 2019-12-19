@@ -80,7 +80,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    border-top: 4px solid $color_black;
     // box-shadow: 0 10px 0px -6px $color_light_mint;
     // border: .5px solid $color_black;
   }
@@ -101,7 +100,7 @@
   .info-title {
     font-family: 'Cedarville Cursive', cursive;
     font-size: 25px;
-    color: $color_black;
+    // color: $color_black;
     margin: 0px;
   }
 

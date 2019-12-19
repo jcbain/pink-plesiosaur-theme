@@ -1,4 +1,6 @@
 {{ define "main" }}
+
+{{ $post_colors := (slice "#f4be1a" "#84a38d" "#000000") }}
   <div class="welcome-container">
     <div class="empty left"></div>
     <div class="message-container">
@@ -19,14 +21,15 @@
           <div class="post-container">
             <div class="post-info-container">
               <div class="post-info">
-                <p class="info-title">
-                    {{ .Title }} 
-                </p>
+                {{ $shuffled_colors := $post_colors | shuffle }}
+                {{ $chosen_color := index $shuffled_colors 0 }}
+                <p class="info-title" style="color:{{ $chosen_color }}">
+                    {{ .Title }}
                 <p class="info-date info-text">{{ .Date.Format "Monday Jan 2, 2006" }}</p>
               </div>
           <!-- <div class="post showcase-post" {{ if .Params.Image }} style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url({{ .Params.Image | absURL }});" {{ end }}> -->
           </div>
-          <div class="post showcase-post" {{ if .Params.Image }} style="background-image: url({{ .Params.Image | absURL }});" {{ end }}>
+          <div class="post showcase-post" {{ if .Params.Image }} style="background-image: url({{ .Params.Image | absURL }}); border-top: 4px solid {{ $chosen_color }};" {{ end }}>
 
         </div>
       </div>
