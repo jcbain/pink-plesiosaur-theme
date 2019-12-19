@@ -61,49 +61,53 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     height: 400px;
-    // padding: 40px;
+    padding: 40px;
     margin-bottom: 80px;
   }
 
+  .post-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
+    margin: 30px;
+    height: 100%;
+    box-shadow: 10px 10px 5px rgba(165, 165, 165, .5);
+  }
+
   .showcase-post{
-    // margin: 30px;
-    padding: 10px;
-    height: 90%;
+    padding: 0px;
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr .5fr;
-    // box-shadow: 10px 10px 5px rgba(165, 165, 165, .5);
+    height: 100%;
+    border-top: 4px solid $color_black;
     // box-shadow: 0 10px 0px -6px $color_light_mint;
     // border: .5px solid $color_black;
   }
 
-
   .post-info-container{
+    height: 100%;
+    background-color: $color_cream;
     display: grid;
-    grid-template-columns: 1fr .5fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: .5fr .5fr;
+    justify-content: center;
   }
 
   .post-info{
-    background-color: $color_pink_alt;
-    border: 2px solid $color_black;
-    padding: 5px 10px;
+    padding: 10px 15px 0px 15px;
+    text-align: center;
   }
 
-  .info-title a{
-    font-family: 'Righteous', sans-serif;
-    font-size: 15px;
+  .info-title {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 25px;
     color: $color_black;
     margin: 0px;
   }
 
   .info-text {
     font-family: 'Abel', sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     color: $color_black;
     margin: 0px;
   }

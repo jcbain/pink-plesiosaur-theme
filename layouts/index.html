@@ -14,21 +14,22 @@
     {{ range .Data.Pages }}
       {{ if eq .Type "post" }}
       {{range first 3 .Pages.ByPublishDate.Reverse }}
+        
         <a href="{{ .RelPermalink }}">
+          <div class="post-container">
+            <div class="post-info-container">
+              <div class="post-info">
+                <p class="info-title">
+                    {{ .Title }} 
+                </p>
+                <p class="info-date info-text">{{ .Date.Format "Monday Jan 2, 2006" }}</p>
+              </div>
           <!-- <div class="post showcase-post" {{ if .Params.Image }} style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url({{ .Params.Image | absURL }});" {{ end }}> -->
-              <div class="post showcase-post" {{ if .Params.Image }} style="background-image: url({{ .Params.Image | absURL }});" {{ end }}>
-            <div class="empty top"></div>
-          <div class="post-info-container">
-            <div class="post-info">
-              <p class="info-title">
-                  {{ .Title }} 
-              </p>
-              <p class="info-date info-text">{{ .Date.Format "Monday Jan 2, 2006" }}</p>
-              <p class="info-author info-text">{{ .Params.Author }}</p> 
-            </div>
-            <div class="empty bottomright"></div>
           </div>
+          <div class="post showcase-post" {{ if .Params.Image }} style="background-image: url({{ .Params.Image | absURL }});" {{ end }}>
+
         </div>
+      </div>
       </a>
       {{ end }}
       {{ end }}
