@@ -1,65 +1,65 @@
-.footer-container{
-    background-color: $color_dark_pink;
-    height: 120px;
-    display: grid;
-    grid-template-columns: .5fr .5fr .5fr .5fr;
-    grid-template-rows: 1fr;
-}
+// .footer-container{
+//     background-color: $color_dark_pink;
+//     height: 120px;
+//     display: grid;
+//     grid-template-columns: .5fr .5fr .5fr .5fr;
+//     grid-template-rows: 1fr;
+// }
 
-.container-left{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr 1fr;
-}
-.copyright-container{
-    font-family: 'Abel', sans-serif;
-    font-size: 10px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: top;
-}
+// .container-left{
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: 1.5fr 1fr;
+// }
+// .copyright-container{
+//     font-family: 'Abel', sans-serif;
+//     font-size: 10px;
+//     margin-left: 20px;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: left;
+//     align-items: top;
+// }
 
-.copyright-container i{
-    padding-top: 2px;
-}
+// .copyright-container i{
+//     padding-top: 2px;
+// }
 
-.copyright-item{
-    margin-left: 5px;
-    margin-top: 20px;
-}
+// .copyright-item{
+//     margin-left: 5px;
+//     margin-top: 20px;
+// }
 
-.copyright-item p{
-    margin-top: 0px;
-}
+// .copyright-item p{
+//     margin-top: 0px;
+// }
 
-.address-container{
-    margin-top: 10px;
-}
+// .address-container{
+//     margin-top: 10px;
+// }
 
-.address-container p{
-    font-family: 'Abel', sans-serif;
-    font-size: 15px;
-}
+// .address-container p{
+//     font-family: 'Abel', sans-serif;
+//     font-size: 15px;
+// }
 
-.address-container h2{
-    font-family: 'Righteous', sans-serif;
-    font-size: 10px;
-}
+// .address-container h2{
+//     font-family: 'Righteous', sans-serif;
+//     font-size: 10px;
+// }
 
-.icon-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 10px;
-}
+// .icon-container{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//     grid-template-rows: 1fr;
+//     padding: 10px;
+// }
 
-.icon{
-    padding: 5px;
-    margin: 2px;
-}
+// .icon{
+//     padding: 5px;
+//     margin: 2px;
+// }
 
-.fab{
-    color: $color_cream;
-}
+// .fab{
+//     color: $color_cream;
+// }

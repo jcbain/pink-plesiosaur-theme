@@ -1,23 +1,19 @@
 <head>
     <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {{ hugo.Generator }}
         {{  if eq .RelPermalink "/" }}
             <title>{{ .Site.Title }}</title>
         {{ else }}
             <title>{{ .Title }}{{ with .Params.subtitle }} - {{ . }} {{ end }} - {{ .Site.Title }}</title>
         {{ end }}
-    
-    {{/*  GOOGLE FONTS  */}}
-    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet"/>   
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Rozha+One&display=swap" rel="stylesheet"> 
 
     {{/*  FONT AWESOME  */}}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />    
+    {{/*  GOOGLE FONTS  */}}
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round&display=swap" rel="stylesheet"> 
+
 
     {{/*  CSS/SCSS  */}}
     {{/*  <link href="{{"css/style.css" | relURL}}" rel="stylesheet" type="text/css">   */}}

@@ -1,20 +1,16 @@
-<header class="navbar-container">
-    <div class="navleft">
-        <div class="navname">
+<header>
+    <div id="title-container">
+        <h2 id="title">
             <a href="/">{{ .Site.Title }}</a>
-
-        </div>
+        </h2>
     </div>
-    <div class="navright">
-    {{ range .Site.Menus.main }}
-        {{ if eq .Name "Logo"}}
-        {{ $logo := $.Site.Params.Logo }}
-            <div class="navitem"><a href="{{ .URL | absURL }}"><img class="logo" src="{{ $logo.URL }}" alt="{{ $logo.Alt }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}"/></a></div>
-        {{ else }}
-            <div class="navitem navtext">
-                <a href="{{ .URL | absURL }}">{{ .Name }}</a>
-            </div>
+
+    <div id="icon-container">
+        {{ range .Site.Params.social }}
+        <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+            <i class="{{.icon}}"></i>
+        </a>
         {{ end }}
-    {{ end }}
+    
         </div>
 </header>
