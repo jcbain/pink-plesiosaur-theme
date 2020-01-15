@@ -1,5 +1,61 @@
 {{ define "main" }}
 <div class="single-container">
+  <h1 class="single-title">{{ .Title }}</h1>
+
+  <div class="single-meta">
+    <h3 class="single-author">by: {{ .Params.Author }}</h3>
+    <h3 class="single-date">{{ .Date.Format "Monday Jan 2, 2006"}}</h3>
+    <p class="single-wordc">{{ .WordCount }} words </p>
+
+  </div>
+
+  <div class="single-tags">
+    {{ with .Params.Tags }}
+    <p>tags: </p>
+        {{ range . }}
+        <p><a class="link" href="{{"tags/" |absURL}}{{ . | urlize }}">{{ . }}</a></p>
+        {{ end }}
+    {{ end }}
+  </div>
+
+  <div class="single-content">
+    {{ .Content }}
+  </div>
+
+  <div class="single-categories">
+    {{ with .Params.Categories }}
+    <p>categories: </p>
+        {{ range . }}
+        <p><a class="link" href="{{"categories/" |absURL}}{{ . | urlize }}">{{ . }}</a></p>
+        {{ end }}
+    {{ end }}
+  </div>
+
+ 
+
+  <div class="single-other">
+    {{ with .PrevInSection }}
+    <p>Previous post:
+      <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+    </p>
+  {{ end }}
+  {{ with .NextInSection }}
+    <p>Next post: 
+      <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+    </p>
+  {{ end }}
+  </div>
+
+  <div class="single-disqus">
+    {{ template "_internal/disqus.html" . }}
+  </div>
+
+</div>
+
+{{ end }}
+
+{{/*  {{ define "main" }}
+<div class="single-container">
 <div class="empty-left"></div>
 <div>
   <h1>{{ .Title }}</h1>
@@ -49,4 +105,4 @@
 </div>
 <div class="empty-right"></div>
 </div>
-{{ end }}
+{{ end }}  */}}
