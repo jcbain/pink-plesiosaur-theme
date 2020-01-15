@@ -3,14 +3,6 @@ html, body {
   height: 100%;
 }
 
-.wrapper {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
-}
-
-
 html {
     margin: 0;
     padding: 0;
@@ -29,20 +21,3 @@ a {
   text-decoration: none;
   color: $color_dark;
 }
-
-// // header containers
-// .header-container{
-//   display: grid;
-//   grid-template-rows: 1fr;
-//   grid-template-columns: 1fr;
-//   margin-top: 50px;
-//   margin-bottom: 10px;
-// }
-
-// .header-container h1{
-//   justify-self: center;
-//   font-family: 'Rozha One', sans-serif;
-//   font-size: 30px;
-//   color: $color_pink_font;
-//   margin: 0px;
-// }
