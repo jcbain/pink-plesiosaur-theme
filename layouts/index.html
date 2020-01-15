@@ -34,16 +34,25 @@
     <div id="posts-container">
     {{ range .Data.Pages }}
       {{ if eq .Type "post" }}
+      {{ $.Scratch.Set "counter" 0}}
         {{ range first 3 .Pages.ByPublishDate.Reverse}}
+        {{ $counter := $.Scratch.Get "counter" }}
         <a href="{{ .RelPermalink }}">
+          {{ if eq $counter 0 }}
           <div class="feature-post" data-aos="fade-right">
             <div class="post-image" {{ if .Params.Image }} style="background-image: url({{ .Params.Image | absURL }});" {{ end }}></div>
             <div class="post-meta">
+            {{ $.Scratch.Add "counter" 1}}
+          {{else}}
+          <div class="feature-post" data-aos="fade-left">
+            <div class="post-image-right" {{ if .Params.Image }} style="background-image: url({{ .Params.Image | absURL }});" {{ end }}></div>
+            <div class="post-meta-left">
+            {{ $.Scratch.Add "counter" -1}}
+          {{end}}
               <h2>{{ .Title }}</h2>
               <p>{{ .Date.Format "Monday Jan 2, 2006" }}</p>
             </div>
           </div>
-
         </a>
         {{ end }}
       {{ end }}
