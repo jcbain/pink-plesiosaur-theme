@@ -7,7 +7,7 @@
 
     <div id="icon-container">
         {{ range .Site.Params.social }}
-        <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+        <a href="{{ .url }}" target="_blank" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
             <i class="{{.icon}}"></i>
         </a>
         {{ end }}

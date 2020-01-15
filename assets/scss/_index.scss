@@ -112,7 +112,7 @@
   display: grid;
   grid-template-areas: "a b";
   margin: 40px;
-  grid-column-gap: 100px;
+  grid-column-gap: 50px;
 }
 
 .post-image{
@@ -137,11 +137,13 @@
 
 .post-meta{
   grid-area: b;
+  width: 300px;
 }
 
 .post-meta-left{
   grid-area: a;
   text-align: right;
+  width: 300px;
 }
 
 #contact-container{
