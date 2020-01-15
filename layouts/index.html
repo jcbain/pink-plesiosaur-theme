@@ -20,7 +20,7 @@
     </div>
   
     <div id="profile-description" data-aos="fade-left">
-        <h2>I'm James</h2>
+        <h2>{{ .Site.Params.WelcomeMessage | markdownify }}</h2>
         <p>{{ .Site.Params.Description | markdownify }} <a href="/post">Checkout the rests of my posts here! </a></p>
     </div>
   </div>
@@ -66,45 +66,3 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script type="text/javascript" src="/js/app.js"></script>
 {{ end }}
-
-{{/*  {{ define "main" }}
-
-{{ $post_colors := (slice "#f4be1a") }}
-  <div class="welcome-container">
-    <div class="empty left"></div>
-    <div class="message-container">
-      <h1 class="welcome">{{ .Site.Params.WelcomeMessage | markdownify }}</h1>
-      <h2 class="description">{{ .Site.Params.Description | markdownify }}</h2>
-    </div>
-    <div class="empty right"></div>
-  </div>
-  <div class="header-container">
-    <h1>some of my recent blog posts...</h1>
-  </div>
-  <div class="showcase-container">
-    {{ range .Data.Pages }}
-      {{ if eq .Type "post" }}
-      {{range first 3 .Pages.ByPublishDate.Reverse }}
-        
-        <a href="{{ .RelPermalink }}">
-          <div class="post-container">
-            <div class="post-info-container">
-              <div class="post-info">
-                {{ $shuffled_colors := $post_colors | shuffle }}
-                {{ $chosen_color := index $shuffled_colors 0 }}
-                <p class="info-title" style="color:{{ $chosen_color }}">
-                    {{ .Title }}
-                <p class="info-date info-text">{{ .Date.Format "Monday Jan 2, 2006" }}</p>
-              </div>
-          <!-- <div class="post showcase-post" {{ if .Params.Image }} style="background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url({{ .Params.Image | absURL }});" {{ end }}> -->
-          </div>
-          <div class="post showcase-post" {{ if .Params.Image }} style="background-image: url({{ .Params.Image | absURL }}); border-top: 4px solid {{ $chosen_color }};" {{ end }}>
-
-        </div>
-      </div>
-      </a>
-      {{ end }}
-      {{ end }}
-    {{ end }}
-  </div>
-{{ end }}  */}}
