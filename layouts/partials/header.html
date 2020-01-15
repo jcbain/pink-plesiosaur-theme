@@ -7,7 +7,11 @@
 
     <div id="icon-container">
         {{ range .Site.Params.social }}
+        {{ if eq .name "Blog" }}
+        <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+        {{ else }}
         <a href="{{ .url }}" target="_blank" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+        {{end}}
             <i class="{{.icon}}"></i>
         </a>
         {{ end }}

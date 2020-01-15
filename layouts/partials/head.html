@@ -33,4 +33,6 @@
     {{ end }}
 
     <link rel="icon" type="image/png" href="{{ .Site.Params.favicon | absURL }}" sizes="32x32">
+
+    {{ partial "mathjax_support.html" . }}
 </head>

@@ -8,10 +8,18 @@
     <p class="single-wordc">{{ .WordCount }} words </p>
 
   </div>
+  <div class="single-categories">
+    {{ with .Params.Categories }}
+    <p>categories </p>
+        {{ range . }}
+        <p><a class="link" href="{{"categories/" |absURL}}{{ . | urlize }}">{{ . }}</a></p>
+        {{ end }}
+    {{ end }}
+  </div>
 
   <div class="single-tags">
     {{ with .Params.Tags }}
-    <p>tags: </p>
+    <p>tags </p>
         {{ range . }}
         <p><a class="link" href="{{"tags/" |absURL}}{{ . | urlize }}">{{ . }}</a></p>
         {{ end }}
@@ -22,28 +30,20 @@
     {{ .Content }}
   </div>
 
-  <div class="single-categories">
-    {{ with .Params.Categories }}
-    <p>categories: </p>
-        {{ range . }}
-        <p><a class="link" href="{{"categories/" |absURL}}{{ . | urlize }}">{{ . }}</a></p>
-        {{ end }}
-    {{ end }}
-  </div>
-
- 
-
   <div class="single-other">
+    <h3>Why stop here? Keep reading...</h3>
+    <div class="single-other-opts">
     {{ with .PrevInSection }}
-    <p>Previous post:
-      <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+    <p>previous post:
+      <a class="previous link" href="{{.Permalink}}"> {{.Title}}</a>
     </p>
-  {{ end }}
-  {{ with .NextInSection }}
-    <p>Next post: 
-      <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+    {{ end }}
+    {{ with .NextInSection }}
+    <p>next post: 
+      <a class="next link" href="{{.Permalink}}"> {{.Title}}</a>
     </p>
-  {{ end }}
+    {{ end }}
+    </div>
   </div>
 
   <div class="single-disqus">
@@ -53,56 +53,3 @@
 </div>
 
 {{ end }}
-
-{{/*  {{ define "main" }}
-<div class="single-container">
-<div class="empty-left"></div>
-<div>
-  <h1>{{ .Title }}</h1>
-  <h2>by {{ .Params.Author }}</h2>
-  {{ with .Params.tags }}
-  <ul>
-    {{ range . }}
-      <li> <a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
-    {{ end }}
-  </ul>
-  {{ end }}
-  <div>
-        <div>
-          <h4> {{ .Date.Format "Monday Jan 2, 2006" }} </h4>
-          <h5> {{ .WordCount }} Words </h5>
-        </div>
-        </div>
-  <div>
-        <article>
-           {{ .Content }}
-        </article>
-  </div>
-</div>
-<div>
-  <h3>Logged Under:</h3>
-{{ with .Params.categories }}
-<ul>
-  {{ range . }}
-    <li> <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> </li>
-  {{ end }}
-</ul>
-{{ end }}
-<aside>
-    <div>
-        {{ with .PrevInSection }}
-          <p>Previous post:
-            <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-          </p>
-        {{ end }}
-        {{ with .NextInSection }}
-          <p>Next post: 
-            <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-          </p>
-        {{ end }}
-    </div>
-</aside>
-</div>
-<div class="empty-right"></div>
-</div>
-{{ end }}  */}}
