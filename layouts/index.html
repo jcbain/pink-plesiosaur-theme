@@ -21,14 +21,14 @@
   
     <div id="profile-description" data-aos="fade-left">
         <h2>{{ .Site.Params.WelcomeMessage | markdownify }}</h2>
-        <p>{{ .Site.Params.Description | markdownify }} <a href="/post">Checkout the rests of my posts here! </a></p>
+        <p>{{ .Site.Params.Description | markdownify }}</p>
     </div>
   </div>
 
   <div id="blog-container">
     <div id="blog-description" data-aos="zoom-in-down">
-      <h2>I also blog from time to time</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor magna eget est lorem ipsum dolor sit amet. Amet est placerat in egestas erat imperdiet sed. Feugiat pretium nibh ipsum consequat. Massa sapien faucibus et molestie ac feugiat sed lectus. Dolor sit amet consectetur adipiscing elit. Amet massa vitae tortor condimentum lacinia quis. Nisl pretium fusce id velit ut tortor pretium. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Eu non diam phasellus vestibulum.</p>
+      <h2>{{ .Site.Params.BlogMessage }}</h2>
+      <p>{{ .Site.Params.BlogDescription }} Checkout the rests of my <a href="/post" class="link">posts here! </a></p>
     </div>
 
     <div id="posts-container">
@@ -52,9 +52,9 @@
 
     <div id="contact-container">
       <div id="contact-description" data-aos="zoom-in-right">
-          <h1>Have a question? Reach out</h1>
-          <h2>📧 jamescbain@gmail.com</h2>
-          <h2>🏢 Calgary, AB</h2>
+          <h1>{{ .Site.Params.Contact.Message }}</h1>
+          <a href="{{ .Site.Params.Contact.URL }}"><h2 class="link">📧 {{ .Site.Params.Contact.Email }}</h2></a>
+          <h2>🏢 {{ .Site.Params.Contact.City }}</h2>
       </div>
       <div data-aos="zoom-in-left"><img src="images/dog.png" style="width: 300px"></div>
 
