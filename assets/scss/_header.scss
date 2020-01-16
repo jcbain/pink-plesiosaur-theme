@@ -2,24 +2,27 @@
 
 header {
   display: grid;
-  grid-template-areas: "a a a a b b";
+  // grid-template-areas: "a a a a b b";
+  grid-template-columns: 1fr 1fr;
   width: 100%;
-  margin: 2vh 2vw;
+  margin: 0;
+  align-items: center;
+  @include responsive($sm){
+    grid-template-columns: 1.5fr .5fr;
+  }
 }
 
 #title-container {
-  grid-area: a;
-  align-items: center;
-  padding-left: 2em;
+  padding-left: 3em;
 }
 
 #icon-container {
-  grid-area: b;
-  align-self: right;
-  margin-top: 5vh;
+  padding-right: 3em;
+  justify-self: right;
   @include responsive($sm){
     display: grid;
     grid-template-columns: 1fr;
+    padding-right: 0;
   }
 }
 
@@ -33,6 +36,9 @@ header {
   display: inline-block;
   padding-left: 20px;
   font-weight: 900;
+  @include responsive($sm){
+    margin-bottom: 5px;
+  }
 }
 
 #title {
