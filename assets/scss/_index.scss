@@ -142,15 +142,22 @@
 }
 
 #blog-container{
-  margin: 80px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: .25fr 1.75fr;
+  justify-content: center;
+  justify-items: center;
   @include responsive($sm){
     padding: 2em;
+    margin: 1em;
   }
 }
 
 #blog-description{
+  width: 90vw;
   @include responsive($sm){
     font-size: 3em;
+    padding: 5px;
   }
 }
 
@@ -183,8 +190,10 @@
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
-  width: 300px;
+  // height: 300px;
+  // width: 300px;
+  height: 30vw;
+  width: 30vw;
   @include responsive($sm){
     align-self: center;
     height: 80vw;
@@ -198,9 +207,12 @@
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
-  width: 300px;
+  // height: 300px;
+  // width: 300px;
+  height: 30vw;
+  width: 30vw;
   @include responsive($sm){
+    grid-area: a;
     align-self: center;
     height: 80vw;
     width: 80vw;
@@ -210,12 +222,26 @@
 .post-meta{
   grid-area: b;
   width: 300px;
+  @include responsive($sm){
+    font-size: 3em;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .post-meta-left{
   grid-area: a;
   text-align: right;
   width: 300px;
+  @include responsive($sm){
+    grid-area: b;
+    text-align: left;
+    font-size: 3em;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 #contact-container{
