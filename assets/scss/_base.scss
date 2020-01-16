@@ -15,6 +15,10 @@ body {
 	margin: 0;
 	font-family: 'Crete Round', serif;
 	color: $color_dark;
+	// this shouldn't be a long term fix
+	@include responsive($sm){
+		padding-left: 10em;
+	}
 }
 
 #content {
