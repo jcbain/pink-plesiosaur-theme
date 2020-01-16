@@ -13,3 +13,11 @@ $color_black     : #000000;
 
 $color_pink_base : #f6f2f0;
 $color_pink_font : #f7a98f;
+
+$sm: 500px; // mobile and low-res tablets
+
+@mixin responsive($query) {
+    @media only screen and (max-device-width : $query) {
+        @content;
+    }
+}

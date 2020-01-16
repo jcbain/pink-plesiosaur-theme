@@ -1,10 +1,9 @@
 /* INDEX */
 
 #content {
-  padding: 20px;
+  padding: 0;
   position: absolute;
   width: 100%;
-  padding: 0;
   margin: 0;
 }
 
@@ -12,19 +11,30 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  @include responsive($sm){
+    height: 80vh;
+  }
 }
 
 #hello{
   width: 400px;
+  @include responsive($sm){
+    width: 100vw;
+  }
 }
 
 #image-container{
-  text-align: center;
-  position: absolute; 
   width: 400px;
+  text-align: center;
+  z-index: 99;
+  position: absolute; 
   top: 20vh;
   left: 40vw;
-  z-index: 99;
+  @include responsive($sm){
+    top: 5vh;
+    left: 2vh;
+    width: 100vw;
+  }
 }
 
 .cloud {
@@ -35,6 +45,9 @@
 #cloud1 {
   top: 0vh;
   left: 2vw;
+  @include responsive($sm){
+    top: -10vh;
+  }
 }
 
 #cloud2 {
@@ -71,6 +84,9 @@
   top: 40vh;
   left: 15vw;
   z-index: 3;
+  @include responsive($sm){
+    left: 0vw;
+  }
 }
 
 #cloud9 {
@@ -87,6 +103,9 @@
   top: 40vh;
   left: 2vw;
   z-index: -400;
+  @include responsive($sm){
+    width: 50vw;
+  }
 } 
 
 #about-me {
@@ -95,10 +114,51 @@
   grid-column-gap: 10px;
   padding: 10em;
   align-items: center;
+  @include responsive($sm){
+    grid-template-columns: none;
+    grid-template-areas: 
+    "text"
+    "pic";
+    padding: 2em;
+    font-size: 3em;
+  }
+}
+
+#profile-description{
+  @include responsive($sm){
+    grid-area: text;
+    align-self: center;
+  }
+}
+
+#profile-container{
+  @include responsive($sm){
+    grid-area: pic;
+    width: 90vw;
+    text-align: center;
+    display: block;
+    align-self: center;
+  }
+}
+
+#profile{
+  width: 370px;
+  @include responsive($sm){
+    width: 90vw;
+  }
 }
 
 #blog-container{
-  margin: 50px;
+  margin: 80px;
+  @include responsive($sm){
+    padding: 2em;
+  }
+}
+
+#blog-description{
+  @include responsive($sm){
+    font-size: 3em;
+  }
 }
 
 #posts-container{
@@ -106,6 +166,10 @@
   grid-template-rows: 1fr 1fr 1fr;
   padding: 40px;
   justify-items: center;
+  @include responsive($sm){
+    width: 100%;
+    padding: 1em;
+  }
 }
 
 .feature-post{
@@ -113,6 +177,11 @@
   grid-template-areas: "a b";
   margin: 40px;
   grid-column-gap: 50px;
+  @include responsive($sm){
+    grid-template-areas: 
+    "a" 
+    "b";
+  }
 }
 
 .post-image{
@@ -123,6 +192,11 @@
   background-size: cover;
   height: 300px;
   width: 300px;
+  @include responsive($sm){
+    align-self: center;
+    height: 80vw;
+    width: 80vw;
+  }
 }
 
 .post-image-right{
@@ -133,6 +207,11 @@
   background-size: cover;
   height: 300px;
   width: 300px;
+  @include responsive($sm){
+    align-self: center;
+    height: 80vw;
+    width: 80vw;
+  }
 }
 
 .post-meta{

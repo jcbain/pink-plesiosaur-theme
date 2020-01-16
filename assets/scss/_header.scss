@@ -17,6 +17,16 @@ header {
   grid-area: b;
   align-self: right;
   margin-top: 5vh;
+  @include responsive($sm){
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.fab, .fas {
+  @include responsive($sm){
+    font-size: 100px;
+  }
 }
 
 #icon-container i {
@@ -29,5 +39,8 @@ header {
   font-family: 'Baloo Bhaijaan', cursive;
   color:#484043;
   font-size: 2em;
+  @include responsive($sm){
+    font-size: 8em;
+  }
 }
 
