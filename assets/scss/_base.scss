@@ -6,8 +6,6 @@ html, body {
   padding: 0;
 }
 
-// html {
-
 //   }
 body {
 	background-color: $color_cream;
@@ -22,10 +20,14 @@ body {
 }
 
 #content {
-	padding: 0;
-	position: absolute;
 	width: 100%;
 	margin: 0;
+	padding: 0;
+	position: relative;
+	display: grid;
+	grid-template-rows: repeat(auto-fit, minmax(.25fr, 1.75fr));
+	justify-content: center;
+
   }
 
 a {
@@ -34,10 +36,11 @@ a {
   color: $color_dark;
 }
 
-a:hover { color: #fed330; }
+a:hover { 
+	color: #fed330; 
+}
 
 .link{
-	// font-weight: 700;
 	text-decoration: none;
 }
 
