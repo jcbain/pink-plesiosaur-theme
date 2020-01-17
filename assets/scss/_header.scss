@@ -7,17 +7,17 @@ header {
   width: 100%;
   margin: 0;
   align-items: center;
-  @include responsive($sm){
-    grid-template-columns: 1.5fr .5fr;
-  }
 }
 
 #title-container {
-  padding-left: 3em;
+  padding-left: 3%;
+  @include responsive($sm){
+    font-size: 2vw;
+  }
 }
 
 #icon-container {
-  padding-right: 3em;
+  padding-right: 3%;
   justify-self: right;
   @include responsive($sm){
     display: grid;
@@ -28,7 +28,7 @@ header {
 
 .fab, .fas {
   @include responsive($sm){
-    font-size: 100px;
+    font-size: 15vw;
   }
 }
 
