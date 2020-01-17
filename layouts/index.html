@@ -1,19 +1,19 @@
 {{ define "main"}}
 <div id="cloud-banner">
   <div id="image-container"><img id="hello" alt="hi" src="images/neon_hi.png" ></div>
-  {{/*  <img id="cloud1" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:400px;">
-  <img id="cloud2" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:300px;">
+  <img id="cloud1" class="cloud" src="images/cloud_samp.png" alt="Cloud">
+  {{/*  <img id="cloud2" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:300px;">
   <img id="cloud3" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:200px;">
   <img id="cloud4" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:350px;">
   <img id="cloud5" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:250px;">
   <img id="cloud6" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:400px;">
   <img id="cloud7" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:250px;">
   <img id="cloud8" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:300px;">
-  <img id="cloud9" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:370px;">  */}}
-  <img id="scroll-image" alt="scroll" src="images/scroll_down.gif" >
+  <img id="cloud9" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:370px;">
+  <img id="scroll-image" alt="scroll" src="images/scroll_down.gif" >  */}}
 </div>
 
-<div id="about-me">
+{{/*  <div id="about-me">
   <div id="profile-container" data-aos="fade-right">
     <img id="profile" alt="me" src="images/me_small.JPG">
   </div>
@@ -22,9 +22,9 @@
       <h2>{{ .Site.Params.WelcomeMessage | markdownify }}</h2>
       <p>{{ .Site.Params.Description | markdownify }}</p>
   </div>
-</div>
+</div>  */}}
 
-<div id="blog-container">
+{{/*  <div id="blog-container">
   <div id="blog-description" data-aos="zoom-in-down">
     <h2>{{ .Site.Params.BlogMessage }}</h2>
     <p>{{ .Site.Params.BlogDescription }} Checkout the rests of my <a href="/post" class="link">posts here! </a></p>
@@ -57,9 +57,9 @@
     {{ end }}
   {{ end }}
   </div>
-  </div>
+  </div>  */}}
   
-  <div id="contact-container">
+  {{/*  <div id="contact-container">
     <div id="contact-description" data-aos="zoom-in-right">
         <h1>{{ .Site.Params.Contact.Message }}</h1>
         <a href="{{ .Site.Params.Contact.URL }}"><h2 class="link">📧 {{ .Site.Params.Contact.Email }}</h2></a>
@@ -67,7 +67,7 @@
     </div>
     <div data-aos="zoom-in-left"><img src="images/dog.png" style="width: 300px"></div>
 
-  </div>
+  </div>  */}}
 
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

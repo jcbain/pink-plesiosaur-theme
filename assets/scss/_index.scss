@@ -2,261 +2,282 @@
 
 #cloud-banner {
   width: 100%;
-  // height: 100vh;
-  overflow: hidden;
-  @include responsive($sm){
-    height: 80vh;
-  }
+  overflow-x: hidden;
+}
+
+#image-container {
+  width: 40vw;
+  position: relative;
 }
 
 #hello{
-  width: 400px;
-  @include responsive($sm){
-    width: 100vw;
-  }
-}
-
-#image-container{
-  width: 400px;
+  width: 40vw;
   text-align: center;
   z-index: 99;
-  position: absolute; 
-  top: 20vh;
-  left: 40vw;
-  @include responsive($sm){
-    top: 5vh;
-    left: 2vh;
-    width: 100vw;
-  }
 }
 
-// .cloud {
-//   position: absolute;
-//   display: inline;
-// }
+.cloud {
+  position: relative;
+  display: inline;
+}
 
 #cloud1 {
-  top: 0vh;
-  left: 2vw;
-  @include responsive($sm){
-    top: -10vh;
+  width: 5vw;
+}
+
+@media (max-width: 640px) {
+
+  #image-container {
+    width: 80vw;
   }
-}
 
-#cloud2 {
-  top: 40vh;
-  left: 75vw;
-}
-
-#cloud3 {
-  top: 0vh;
-  left: 50vw;
-}
-
-#cloud4 {
-  top: 0vh;
-  left: 65vw;
-}
-
-#cloud5 {
-  top: 20vh;
-  right: -10vw;
-}
-
-#cloud6 {
-  top: 57vh;
-  left: -15vw;
-}
-
-#cloud7 {
-  top: 67vh;
-  left: 60vw;
-}
-
-#cloud8 {
-  top: 40vh;
-  left: 15vw;
-  z-index: 3;
-  @include responsive($sm){
-    left: 0vw;
-  }
-}
-
-#cloud9 {
-  top: 50vh;
-  left: 35vw;
-  z-index: 1;
-} 
-
-#scroll-image {
-  position: absolute;
-  display: inline;
-  transform: rotate(90deg);
-  width: 250px;
-  top: 40vh;
-  left: 2vw;
-  z-index: -400;
-  @include responsive($sm){
-    width: 50vw;
-  }
-} 
-
-#about-me {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10px;
-  padding: 10em;
-  align-items: center;
-  @include responsive($sm){
-    grid-template-columns: none;
-    grid-template-areas: 
-    "text"
-    "pic";
-    padding: 2em;
-    font-size: 3em;
-  }
-}
-
-#profile-description{
-  @include responsive($sm){
-    grid-area: text;
-    align-self: center;
-  }
-}
-
-#profile-container{
-  @include responsive($sm){
-    grid-area: pic;
-    width: 90vw;
-    text-align: center;
-    display: block;
-    align-self: center;
-  }
-}
-
-#profile{
-  width: 370px;
-  @include responsive($sm){
-    width: 90vw;
-  }
-}
-
-#blog-container{
-  width: 100%;
-  display: grid;
-  grid-template-rows: .25fr 1.75fr;
-  justify-content: center;
-  justify-items: center;
-  @include responsive($sm){
-    padding: 2em;
-    margin: 1em;
-  }
-}
-
-#blog-description{
-  width: 90vw;
-  @include responsive($sm){
-    font-size: 3em;
-    padding: 5px;
-  }
-}
-
-#posts-container{
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  padding: 40px;
-  justify-items: center;
-  @include responsive($sm){
-    width: 100%;
-    padding: 1em;
-  }
-}
-
-.feature-post{
-  display: grid;
-  grid-template-areas: "a b";
-  margin: 40px;
-  grid-column-gap: 50px;
-  @include responsive($sm){
-    grid-template-areas: 
-    "a" 
-    "b";
-  }
-}
-
-.post-image{
-  grid-area: a;
-  padding: 0px;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // height: 300px;
-  // width: 300px;
-  height: 30vw;
-  width: 30vw;
-  @include responsive($sm){
-    align-self: center;
-    height: 80vw;
+  #hello{
     width: 80vw;
   }
 }
 
-.post-image-right{
-  grid-area: b;
-  padding: 0px;
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  // height: 300px;
-  // width: 300px;
-  height: 30vw;
-  width: 30vw;
-  @include responsive($sm){
-    grid-area: a;
-    align-self: center;
-    height: 80vw;
-    width: 80vw;
-  }
-}
 
-.post-meta{
-  grid-area: b;
-  width: 300px;
-  @include responsive($sm){
-    font-size: 3em;
-    align-self: center;
-    text-align: center;
-    width: 100%;
-  }
-}
+// #image-container{
+//   width: 400px;
+//   text-align: center;
+//   z-index: 99;
+//   position: absolute; 
+//   top: 20vh;
+//   left: 40vw;
+//   @include responsive($sm){
+//     top: 5vh;
+//     left: 2vh;
+//     width: 100vw;
+//   }
+// }
 
-.post-meta-left{
-  grid-area: a;
-  text-align: right;
-  width: 300px;
-  @include responsive($sm){
-    grid-area: b;
-    text-align: left;
-    font-size: 3em;
-    align-self: center;
-    text-align: center;
-    width: 100%;
-  }
-}
+// // .cloud {
+// //   position: absolute;
+// //   display: inline;
+// // }
 
-#contact-container{
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 40px;
-  justify-items: center;
-  justify-content: center;
-  margin: 40px;
-  @include responsive($sm){
-    font-size: 1.5em;
-    padding: 10vw;
-  }
-}
+// #cloud1 {
+//   top: 0vh;
+//   left: 2vw;
+//   @include responsive($sm){
+//     top: -10vh;
+//   }
+// }
+
+// #cloud2 {
+//   top: 40vh;
+//   left: 75vw;
+// }
+
+// #cloud3 {
+//   top: 0vh;
+//   left: 50vw;
+// }
+
+// #cloud4 {
+//   top: 0vh;
+//   left: 65vw;
+// }
+
+// #cloud5 {
+//   top: 20vh;
+//   right: -10vw;
+// }
+
+// #cloud6 {
+//   top: 57vh;
+//   left: -15vw;
+// }
+
+// #cloud7 {
+//   top: 67vh;
+//   left: 60vw;
+// }
+
+// #cloud8 {
+//   top: 40vh;
+//   left: 15vw;
+//   z-index: 3;
+//   @include responsive($sm){
+//     left: 0vw;
+//   }
+// }
+
+// #cloud9 {
+//   top: 50vh;
+//   left: 35vw;
+//   z-index: 1;
+// } 
+
+// #scroll-image {
+//   position: absolute;
+//   display: inline;
+//   transform: rotate(90deg);
+//   width: 250px;
+//   top: 40vh;
+//   left: 2vw;
+//   z-index: -400;
+//   @include responsive($sm){
+//     width: 50vw;
+//   }
+// } 
+
+// #about-me {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-column-gap: 10px;
+//   padding: 10em;
+//   align-items: center;
+//   @include responsive($sm){
+//     grid-template-columns: none;
+//     grid-template-areas: 
+//     "text"
+//     "pic";
+//     padding: 2em;
+//     font-size: 3em;
+//   }
+// }
+
+// #profile-description{
+//   @include responsive($sm){
+//     grid-area: text;
+//     align-self: center;
+//   }
+// }
+
+// #profile-container{
+//   @include responsive($sm){
+//     grid-area: pic;
+//     width: 90vw;
+//     text-align: center;
+//     display: block;
+//     align-self: center;
+//   }
+// }
+
+// #profile{
+//   width: 370px;
+//   @include responsive($sm){
+//     width: 90vw;
+//   }
+// }
+
+// #blog-container{
+//   width: 100%;
+//   display: grid;
+//   grid-template-rows: .25fr 1.75fr;
+//   justify-content: center;
+//   justify-items: center;
+//   @include responsive($sm){
+//     padding: 2em;
+//     margin: 1em;
+//   }
+// }
+
+// #blog-description{
+//   width: 90vw;
+//   @include responsive($sm){
+//     font-size: 3em;
+//     padding: 5px;
+//   }
+// }
+
+// #posts-container{
+//   display: grid;
+//   grid-template-rows: 1fr 1fr 1fr;
+//   padding: 40px;
+//   justify-items: center;
+//   @include responsive($sm){
+//     width: 100%;
+//     padding: 1em;
+//   }
+// }
+
+// .feature-post{
+//   display: grid;
+//   grid-template-areas: "a b";
+//   margin: 40px;
+//   grid-column-gap: 50px;
+//   @include responsive($sm){
+//     grid-template-areas: 
+//     "a" 
+//     "b";
+//   }
+// }
+
+// .post-image{
+//   grid-area: a;
+//   padding: 0px;
+//   background-position: left;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   // height: 300px;
+//   // width: 300px;
+//   height: 30vw;
+//   width: 30vw;
+//   @include responsive($sm){
+//     align-self: center;
+//     height: 80vw;
+//     width: 80vw;
+//   }
+// }
+
+// .post-image-right{
+//   grid-area: b;
+//   padding: 0px;
+//   background-position: left;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   // height: 300px;
+//   // width: 300px;
+//   height: 30vw;
+//   width: 30vw;
+//   @include responsive($sm){
+//     grid-area: a;
+//     align-self: center;
+//     height: 80vw;
+//     width: 80vw;
+//   }
+// }
+
+// .post-meta{
+//   grid-area: b;
+//   width: 300px;
+//   @include responsive($sm){
+//     font-size: 3em;
+//     align-self: center;
+//     text-align: center;
+//     width: 100%;
+//   }
+// }
+
+// .post-meta-left{
+//   grid-area: a;
+//   text-align: right;
+//   width: 300px;
+//   @include responsive($sm){
+//     grid-area: b;
+//     text-align: left;
+//     font-size: 3em;
+//     align-self: center;
+//     text-align: center;
+//     width: 100%;
+//   }
+// }
+
+// #contact-container{
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-column-gap: 40px;
+//   justify-items: center;
+//   justify-content: center;
+//   margin: 40px;
+//   @include responsive($sm){
+//     font-size: 1.5em;
+//     padding: 10vw;
+//   }
+// }
 
 
 
