@@ -91,6 +91,57 @@
   width: 25vw;
 }
 
+#blog-container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: .25fr 1.75fr;
+  grid-template-columns: .9fr;
+  justify-content: center;
+  justify-items: center;
+}
+
+#posts-container {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+  width: 80vw;
+}
+
+.feature-post {
+  display: grid;
+  grid-template-areas: "a b";
+  grid-column-gap: 2vw;
+}
+
+.post-image {
+  grid-area: a;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30vw;
+  height: 30vw;
+}
+
+.post-image-right {
+  grid-area: b;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30vw;
+  height: 30vw;
+}
+
+.post-meta {
+  grid-area: b;
+  width: 100%;
+}
+
+.post-meta-left {
+  grid-area: a;
+  width: 100%;
+  text-align: right;
+}
+
 #contact-container{
   width: 100%;
   display: grid;
@@ -103,6 +154,8 @@
 #dog-pic {
   width: 20vw;
 }
+
+
 
 @media (max-width: 640px) {
 
@@ -168,180 +221,38 @@
   #profile{
       width: 90vw;
     }
+
+  .feature-post {
+    grid-template-areas: 
+    "a" 
+    "b";
+  }
+
+  .post-image {
+    align-self: center;
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .post-image-right {
+    grid-area: a;
+    align-self: center;
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .post-meta {
+    align-self: center;
+    text-align: center;
+  }
+
+  .post-meta-left {
+    grid-area: b;
+    align-self: center;
+    text-align: center;
+  }
 }
 
-
-// #cloud5 {
-//   top: 20vh;
-//   right: -10vw;
-// }
-
-// #cloud6 {
-//   top: 57vh;
-//   left: -15vw;
-// }
-
-// #cloud7 {
-//   top: 67vh;
-//   left: 60vw;
-// }
-
-// #cloud8 {
-//   top: 40vh;
-//   left: 15vw;
-//   z-index: 3;
-//   @include responsive($sm){
-//     left: 0vw;
-//   }
-// }
-
-// #cloud9 {
-//   top: 50vh;
-//   left: 35vw;
-//   z-index: 1;
-// } 
-
-// #scroll-image {
-//   position: absolute;
-//   display: inline;
-//   transform: rotate(90deg);
-//   width: 250px;
-//   top: 40vh;
-//   left: 2vw;
-//   z-index: -400;
-//   @include responsive($sm){
-//     width: 50vw;
-//   }
-// } 
-
-// #about-me {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-column-gap: 10px;
-//   padding: 10em;
-//   align-items: center;
-//   @include responsive($sm){
-//     grid-template-columns: none;
-//     grid-template-areas: 
-//     "text"
-//     "pic";
-//     padding: 2em;
-//     font-size: 3em;
-//   }
-// }
-
-// #profile-description{
-//   @include responsive($sm){
-//     grid-area: text;
-//     align-self: center;
-//   }
-// }
-
-// #profile-container{
-//   @include responsive($sm){
-//     grid-area: pic;
-//     width: 90vw;
-//     text-align: center;
-//     display: block;
-//     align-self: center;
-//   }
-// }
-
-// #profile{
-//   width: 370px;
-//   @include responsive($sm){
-//     width: 90vw;
-//   }
-// }
-
-// #blog-container{
-//   width: 100%;
-//   display: grid;
-//   grid-template-rows: .25fr 1.75fr;
-//   justify-content: center;
-//   justify-items: center;
-//   @include responsive($sm){
-//     padding: 2em;
-//     margin: 1em;
-//   }
-// }
-
-// #blog-description{
-//   width: 90vw;
-//   @include responsive($sm){
-//     font-size: 3em;
-//     padding: 5px;
-//   }
-// }
-
-// #posts-container{
-//   display: grid;
-//   grid-template-rows: 1fr 1fr 1fr;
-//   padding: 40px;
-//   justify-items: center;
-//   @include responsive($sm){
-//     width: 100%;
-//     padding: 1em;
-//   }
-// }
-
-// .feature-post{
-//   display: grid;
-//   grid-template-areas: "a b";
-//   margin: 40px;
-//   grid-column-gap: 50px;
-//   @include responsive($sm){
-//     grid-template-areas: 
-//     "a" 
-//     "b";
-//   }
-// }
-
-// .post-image{
-//   grid-area: a;
-//   padding: 0px;
-//   background-position: left;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   // height: 300px;
-//   // width: 300px;
-//   height: 30vw;
-//   width: 30vw;
-//   @include responsive($sm){
-//     align-self: center;
-//     height: 80vw;
-//     width: 80vw;
-//   }
-// }
-
-// .post-image-right{
-//   grid-area: b;
-//   padding: 0px;
-//   background-position: left;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   // height: 300px;
-//   // width: 300px;
-//   height: 30vw;
-//   width: 30vw;
-//   @include responsive($sm){
-//     grid-area: a;
-//     align-self: center;
-//     height: 80vw;
-//     width: 80vw;
-//   }
-// }
-
-// .post-meta{
-//   grid-area: b;
-//   width: 300px;
-//   @include responsive($sm){
-//     font-size: 3em;
-//     align-self: center;
-//     text-align: center;
-//     width: 100%;
-//   }
-// }
 
 // .post-meta-left{
 //   grid-area: a;
