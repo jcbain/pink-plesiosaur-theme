@@ -1,9 +1,8 @@
 html, body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
   margin: 0;
-  padding: 0;
+  padding: 0; 
 }
 
 //   }
@@ -13,21 +12,16 @@ body {
 	margin: 0;
 	font-family: 'Crete Round', serif;
 	color: $color_dark;
-	// this shouldn't be a long term fix
-	// @include responsive($sm){
-	// 	padding-left: 10em;
-	// }
 }
 
 #content {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	// position: relative;
 	display: flex;
+	overflow-x: hidden;
 	flex-direction: column;
 	justify-content: center;
-
   }
 
 a {
@@ -88,3 +82,4 @@ a:hover {
 .link:hover::before{
 	transition-duration: .15s;
 }
+

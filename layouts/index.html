@@ -1,11 +1,11 @@
 {{ define "main"}}
 <div id="cloud-banner">
   <div id="image-container"><img id="hello" alt="hi" src="images/neon_hi.png" ></div>
-  <img id="cloud1" class="cloud" src="images/cloud_samp.png" alt="Cloud">
-  {{/*  <img id="cloud2" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:300px;">
-  <img id="cloud3" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:200px;">
-  <img id="cloud4" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:350px;">
-  <img id="cloud5" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:250px;">
+  {{/*  <img id="cloud1" class="cloud" src="images/cloud_samp.png" alt="Cloud">
+  <img id="cloud2" class="cloud" src="images/cloud_samp.png" alt="Cloud">
+  <img id="cloud3" class="cloud" src="images/cloud_samp.png" alt="Cloud">
+  <img id="cloud4" class="cloud" src="images/cloud_samp.png" alt="Cloud">
+  <img id="cloud5" class="cloud" src="images/cloud_samp.png" alt="Cloud">
   <img id="cloud6" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:400px;">
   <img id="cloud7" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:250px;">
   <img id="cloud8" class="cloud" src="images/cloud_samp.png" alt="Cloud" style="width:300px;">
@@ -13,7 +13,7 @@
   <img id="scroll-image" alt="scroll" src="images/scroll_down.gif" >  */}}
 </div>
 
-{{/*  <div id="about-me">
+<div id="about-me">
   <div id="profile-container" data-aos="fade-right">
     <img id="profile" alt="me" src="images/me_small.JPG">
   </div>
@@ -22,7 +22,7 @@
       <h2>{{ .Site.Params.WelcomeMessage | markdownify }}</h2>
       <p>{{ .Site.Params.Description | markdownify }}</p>
   </div>
-</div>  */}}
+</div>
 
 {{/*  <div id="blog-container">
   <div id="blog-description" data-aos="zoom-in-down">
@@ -65,7 +65,7 @@
         <a href="{{ .Site.Params.Contact.URL }}"><h2 class="link">📧 {{ .Site.Params.Contact.Email }}</h2></a>
         <h2>🏢 {{ .Site.Params.Contact.City }}</h2>
     </div>
-    <div data-aos="zoom-in-left"><img src="images/dog.png" style="width: 300px"></div>
+    <div data-aos="zoom-in-left"><img id="dog-pic" src="images/dog.png"></div>
 
   </div>  */}}
 
