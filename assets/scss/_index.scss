@@ -2,9 +2,8 @@
 
 #cloud-banner {
   width: 100%;
-  height: 80vw;
+  height: 100vh;
   position: static;
-  overflow-x: hidden;
 }
 
 #image-container {
@@ -28,6 +27,7 @@
 
 #cloud1 {
   width: 25vw;
+  left: -10vw;
   top: -20vh;
   z-index: 1;
 }
@@ -40,7 +40,7 @@
 
 #cloud3 {
   width: 30vw;
-  left: -30vw;
+  left: -10vw;
   top: -40vh;
   z-index: 2;
 }
@@ -56,6 +56,28 @@
   left: 60vw;
   top: -40vh;
 }
+
+#cloud6 {
+  width: 15vw;
+  left: 55vw;
+  top: -110vh;
+}
+
+#cloud7 {
+  width: 20vw;
+  top: -105vh;
+  left: -30vw;
+}
+
+#scroll-image {
+  position: relative;
+  display: inline;
+  width: 25vw;
+  transform: rotate(90deg);
+  top: -60vh;
+  left: -68vw;
+  z-index: -400;
+} 
 
 #about-me {
   display: grid;
@@ -84,6 +106,10 @@
 
 @media (max-width: 640px) {
 
+  #cloud-banner {
+    height: 50vh;
+  }
+
   #image-container {
     width: 80vw;
     
@@ -96,8 +122,29 @@
   }
 
   #cloud3 {
+    left: -20vw;
     top: -30vh;
   }
+
+  #cloud4 {
+    width: 20vw;
+    left: 15vw;
+  }
+
+  #cloud6 {
+    top: -25vh;
+  }
+
+  #cloud7 {
+    top: -25vh;
+    left: 0vw;
+  }
+
+  #scroll-image {
+    width: 55vw;
+    top: -20vh;
+    left: 50vw;
+  } 
 
   #about-me {
     grid-template-columns: none;
@@ -112,15 +159,15 @@
     align-self: center;
   }
 
-#profile-container{
-    grid-area: pic;
-    text-align: center;
-    align-self: center;
-}
-
-#profile{
-    width: 90vw;
+  #profile-container{
+      grid-area: pic;
+      text-align: center;
+      align-self: center;
   }
+
+  #profile{
+      width: 90vw;
+    }
 }
 
 
