@@ -157,8 +157,12 @@
   width: 80vw;
   margin: 10vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr .5fr;
   grid-column-gap: 2vw;
+}
+
+#dog-container {
+  justify-self: end;
 }
 
 #dog-pic {
@@ -268,7 +272,6 @@
   
   #contact-internal-container {
     margin: 1vh;
-    grid-template-columns: 1fr .5fr;
   }
 
   #dog-image {
