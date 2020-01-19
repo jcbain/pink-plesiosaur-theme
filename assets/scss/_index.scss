@@ -108,9 +108,12 @@
 }
 
 .feature-post {
+  margin: 5vh;
   display: grid;
   grid-template-areas: "a b";
-  grid-column-gap: 2vw;
+  grid-column-gap: 1.5vw;
+  
+  
 }
 
 .post-image {
@@ -129,6 +132,7 @@
   background-size: cover;
   width: 30vw;
   height: 30vw;
+  justify-self: end;
 }
 
 .post-meta {
@@ -145,10 +149,16 @@
 #contact-container{
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  // grid-column-gap: 2vw;
+  grid-template-columns: 1fr;
   justify-items: center;
-  justify-content: center;
+}
+
+#contact-internal-container {
+  width: 80vw;
+  margin: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2vw;
 }
 
 #dog-pic {
@@ -251,22 +261,21 @@
     align-self: center;
     text-align: center;
   }
+
+  #contact-container{
+    font-size: .5rem;
+  }
+  
+  #contact-internal-container {
+    margin: 1vh;
+    grid-template-columns: 1fr .5fr;
+  }
+
+  #dog-image {
+    width: 30vw;
+  }
 }
 
-
-// .post-meta-left{
-//   grid-area: a;
-//   text-align: right;
-//   width: 300px;
-//   @include responsive($sm){
-//     grid-area: b;
-//     text-align: left;
-//     font-size: 3em;
-//     align-self: center;
-//     text-align: center;
-//     width: 100%;
-//   }
-// }
 
 // #contact-container{
 //   width: 100%;
