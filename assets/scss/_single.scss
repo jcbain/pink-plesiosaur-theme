@@ -25,21 +25,21 @@
 }
 
 .single-meta {
-    justify-content: left;
-    width: 100%;
+    // justify-content: left;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
     text-align: left; 
     display: grid;
     grid-template-rows: .25fr .25fr;
-    margin: 0vh 7vw;
     font-size: 1.5rem;
 }
 
 .single-main {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
     justify-self: center;
-
 }
 
 .single-categories {
@@ -48,7 +48,7 @@
     width: 100%;
     text-align: left;
     display: flex;
-    margin: 0vh 7vw;
+    margin: 0vh 5%;
 }
 
 .single-categories p{
@@ -62,7 +62,7 @@
     width: 100%;
     text-align: left;
     display: flex;
-    margin: 0vh 7vw;
+    margin: 0vh 5%;
 }
 
 .single-tags p{
