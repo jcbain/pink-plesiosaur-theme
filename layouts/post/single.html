@@ -1,9 +1,11 @@
 {{ define "main" }}
+<div id="single-container">
   <h1 class="single-title">{{ .Title }}</h1>
 
+
   <div class="single-meta">
-    <div class="single-main">
-      <h3 class="single-author">by: {{ .Params.Author }}</h3>
+    <div class="single-main">   
+      <h3 class="single-author">by: {{ .Params.Author }}</h3>   
       <h3 class="single-date">{{ .Date.Format "Monday Jan 2, 2006"}}</h3>
     </div>
     <p class="single-wordc">{{ .WordCount }} words </p>
@@ -50,6 +52,7 @@
   <div class="single-disqus">
     {{ template "_internal/disqus.html" . }}
   </div>
+</div>
 
 
 {{ end }}
