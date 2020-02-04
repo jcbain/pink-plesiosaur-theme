@@ -28,7 +28,7 @@
 // }
 
 // this is all new
-
+// https://codepen.io/akhil_001/pen/yEwdbB
 
 #icon-container input
 {
@@ -102,14 +102,14 @@
 .action-items-bar
 {
   position:absolute;
-  top:90%;
-  left:50%;
+  top:84%;
+  left:60%;
   width:380px;
   height:60px;
   background-color: #E84F3E;
   border-radius:60px 0px 0px 60px;
   box-shadow: 0px 5px 20px #F19181;
-  z-index:5;
+  z-index:500;
   
 /*   animation-name: expand-the-bar;
   animation-duration: 2s;
@@ -133,7 +133,7 @@
   opacity:0;
   transition: all .2s ease-in-out;
   cursor:pointer; 
-  z-index:8;
+  z-index:800;
 }
 
 a .Github
