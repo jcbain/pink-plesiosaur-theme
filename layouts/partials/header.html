@@ -6,36 +6,27 @@
     </div>
 
     <div id="icon-container">
-        <input type="checkbox" checked/>
-
+        <input type="checkbox" class="menu-toggler" checked="checked"/>
         <div class="hamburger">
             <div class="dots">
               <span class="first"></span>
               <span class="second"></span>
               <span class="third"></span>
             </div>
-        </div>
-        <div class="action-items-bar">
-            <div class="action-items">
+          </div>
+
+        <ul>
                 {{ range .Site.Params.social }}
                 
-                {{ if eq .name "Blog" }}
-                
-                <a href="{{ .url }}" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
-                <span class="{{.name}}">
-                {{ else }}
-                <a href="{{ .url }}" target="_blank" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
-                <span class="{{.name}}">
-                {{end}}
-                
-                    <i class="{{.icon}}"></i>
-                </span>
-                </a>
+                <li class="menu-item">
+                    <a href="{{ .url }}" target="_blank" aria-label="{{ .name }}" {{ if .rel }}rel="{{ .rel }}"{{ end }}>
+                        <i class="{{.icon}}"></i>
+                    </a>
+                </li>
             
 
                 {{ end }}
-            </div>
-        </div>
+        </ul>
     
         </div>
 </header>

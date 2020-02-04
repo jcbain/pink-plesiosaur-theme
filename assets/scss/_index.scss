@@ -28,45 +28,46 @@
 #cloud1 {
   width: 25vw;
   left: -10vw;
-  top: -20vh;
+  top: 0vh;
   z-index: 1;
 }
 
 #cloud2 {
   width: 20vw;
-  top: -10vw;
+  top: 20vw;
   z-index: 1;
 }
 
 #cloud3 {
   width: 30vw;
-  left: -10vw;
-  top: -40vh;
+  left: 10vw;
+  top: 0vh;
   z-index: 2;
 }
 
 #cloud4 {
   width: 12vw;
-  left: 20vw;
-  top: -20vh;
+  left: -20vw;
+  top: 50vh;
 }
 
 #cloud5 {
   width: 30vw;
-  left: 60vw;
-  top: -40vh;
+  left: 0vw;
+  top: 30vh;
 }
 
 #cloud6 {
   width: 15vw;
   left: 55vw;
-  top: -110vh;
+  top: -10vh;
+  z-index: -10;
 }
 
 #cloud7 {
   width: 20vw;
-  top: -105vh;
-  left: -30vw;
+  top: -15vh;
+  left: 30vw;
 }
 
 #scroll-image {
@@ -147,6 +148,7 @@
 }
 
 #contact-container{
+  height: 40vh;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -174,7 +176,7 @@
 @media (max-width: 640px) {
 
   #cloud-banner {
-    height: 50vh;
+    height: 70vh;
   }
 
   #image-container {
