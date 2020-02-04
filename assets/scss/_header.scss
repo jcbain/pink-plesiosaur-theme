@@ -1,13 +1,13 @@
 /* HEADER */
 
-header {
-  width: 100%;
-  margin: 0px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  z-index: -2;
-}
+// header {
+//   width: 100%;
+//   margin: 0px;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   align-items: center;
+//   z-index: -2;
+// }
 
 #title-container {
   padding-left: 10%;
@@ -18,14 +18,162 @@ header {
   font-size: 2rem;
 }
 
-#icon-container {
-  padding-right: 10%;
-  justify-self: right;
+// #icon-container {
+//   padding-right: 10%;
+//   justify-self: right;
+// }
+
+// #icon-container i {
+//   padding-left: 2vw;
+// }
+
+// this is all new
+
+
+#icon-container input
+{
+  position:absolute;
+  top: 85%;
+  left:90%;
+  width:80px;
+  height:80px;
+  z-index:20;
+  border-radius: 80px;
+  opacity:0;
+  cursor:pointer;
+}
+.hamburger
+{
+  position:absolute;
+  top:85%;
+  left:90%;
+  width: 80px;
+  height:80px;
+  background-color: #E84F3E;
+  border-radius:100%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  z-index:10;
+  cursor:pointer;
+}
+.dots span
+{
+  position: absolute;
+  top: 45%;
+  width:8px;
+  height:8px;
+  border-radius:8px;
+  background:#fff;
+  z-index:20;
+    transition: all .3s ease-in-out;
 }
 
-#icon-container i {
-  padding-left: 2vw;
+.first
+{
+  margin-left:1em;
 }
+.second
+{
+  
+  margin-left:2.3em;
+}
+.third
+{
+   margin-left:3.6em;
+}
+
+#icon-container input:checked ~ .hamburger .dots .first
+{
+ top:20px;
+  height:60px;
+  transform-origin:top;
+  transform:rotate(-45deg);
+   transition: all .3s ease-in-out;
+  
+}
+#icon-container input:checked ~ .hamburger .dots .third
+{
+ top:20px;
+  height:60px;
+  transform-origin:top;
+  transform:rotate(45deg);
+   transition: all .3s ease-in-out;
+}
+
+.action-items-bar
+{
+  position:absolute;
+  top:90%;
+  left:50%;
+  width:380px;
+  height:60px;
+  background-color: #E84F3E;
+  border-radius:60px 0px 0px 60px;
+  box-shadow: 0px 5px 20px #F19181;
+  z-index:5;
+  
+/*   animation-name: expand-the-bar;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out; */
+  transform-origin: right;
+  transform:scaleX(0);
+  transition: all .3s ease-in-out;
+}
+#icon-container input:checked ~ .action-items-bar
+{
+  transform-origin: right;
+  transform:scaleX(1);
+}
+
+.action-items a span
+{
+  position: absolute;
+  top: 25%;
+  width:20px;
+  padding-left:35px;
+  opacity:0;
+  transition: all .2s ease-in-out;
+  cursor:pointer; 
+  z-index:8;
+}
+
+a .Github
+{
+  left:0%;
+}
+a .Twitter
+{
+  left:15%;
+}
+a .LinkedIn
+{
+  left:55%;
+}
+a .Pinterest
+{
+  left:70%;
+}
+#icon-container input:checked ~ .action-items-bar .action-items a .Github
+{
+    opacity:1;
+  transition-delay:.45s;
+}
+#icon-container  input:checked ~ .action-items-bar .action-items a .Twitter
+{
+    opacity:1;
+  transition-delay:.40s;
+
+}
+#icon-container  input:checked ~ .action-items-bar .action-items a .LinkedIn
+{
+    opacity:1;
+  transition-delay:.40s;
+}
+#icon-container  input:checked ~ .action-items-bar .action-items a .Pinterest
+{
+    opacity:1;
+  transition-delay:.45s;
+}
+
 
 // mobile design
 @media (max-width: 640px) {
