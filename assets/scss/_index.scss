@@ -2,6 +2,7 @@
 
 #cloud-banner {
   width: 100%;
+  height: 100vh;
   position: static;
 }
 
@@ -22,6 +23,7 @@
 .cloud {
   position: relative;
   display: inline;
+  z-index: -10;
 }
 
 #cloud1 {
@@ -58,8 +60,8 @@
 
 #cloud6 {
   width: 15vw;
-  left: 55vw;
-  top: -10vh;
+  left: 0vw;
+  top: -40vh;
   z-index: -10;
 }
 
@@ -147,7 +149,7 @@
 }
 
 #contact-container{
-  height: 40vh;
+  height: 60vh;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
